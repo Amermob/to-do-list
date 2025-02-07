@@ -59,7 +59,6 @@ function taskToPage(arrTasks) {
     taskBox.appendChild(mainDiv);
   });
   const cleanAll = document.createElement("button");
-
   cleanAll.appendChild(document.createTextNode("Clean All"));
   cleanAll.addEventListener("click", () => {
     localStorage.clear();
@@ -85,4 +84,4 @@ function removeLocal(taskId) {
   localSFun(arrTasks);
 }
 
-function cleanAll() {}
+localStorage.clear();
