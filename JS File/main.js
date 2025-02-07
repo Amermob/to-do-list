@@ -58,6 +58,14 @@ function taskToPage(arrTasks) {
 
     taskBox.appendChild(mainDiv);
   });
+  const cleanAll = document.createElement("button");
+
+  cleanAll.appendChild(document.createTextNode("Clean All"));
+  cleanAll.addEventListener("click", () => {
+    localStorage.clear();
+    taskBox.remove();
+  });
+  taskBox.appendChild(cleanAll);
 }
 
 function localSFun(arrTasks) {
@@ -76,3 +84,5 @@ function removeLocal(taskId) {
   arrTasks = arrTasks.filter((task) => task.id != taskId);
   localSFun(arrTasks);
 }
+
+function cleanAll() {}
