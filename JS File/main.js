@@ -83,5 +83,3 @@ function removeLocal(taskId) {
   arrTasks = arrTasks.filter((task) => task.id != taskId);
   localSFun(arrTasks);
 }
-
-localStorage.clear();
